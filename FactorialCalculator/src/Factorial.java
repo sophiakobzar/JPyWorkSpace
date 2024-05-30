@@ -3,8 +3,10 @@ import java.util.Scanner;
 public class Factorial {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Give a number and I will give factorial");
-        System.out.print("Enter a number: ");
+        System.out.println("Please give a number and I will give the factorial of that number");
+        System.out.println("Example: 3! = 1 + 2 + 3 = 6");
+
+        System.out.print("\nEnter a number: ");
         int number = scanner.nextInt();
         long factorial = calculateFactorial(number);
         System.out.println("The factorial of " + number + " is " + factorial);
