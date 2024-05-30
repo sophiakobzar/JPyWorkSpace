@@ -29,7 +29,7 @@ The program uses a recursive method to calculate the factorial of a number. Here
 4. **Prompt for user input**: The program prompts the user to enter a number.
 
     ```java
-    System.out.println("Enter a number:");
+    System.out.print("Enter a number:");
     ```
 
 5. **Read user input**: The `nextInt` method of the Scanner object is used to read the number entered by the user.
