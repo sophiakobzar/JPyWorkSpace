@@ -1,13 +1,13 @@
-# JavaWorkSpace
+# JPyWorkSpace
 
-Welcome to my JavaWorkSpace! This repository is a collection of my Java code and projects.
+Welcome to my JPyWorkSpace! This repository is a collection of my Java and Python code and projects.
 
 ## Contents
 
 This repository contains:
 
-- Various Java codes that I've written while learning and exploring Java.
-- Projects that I've worked on, showcasing my understanding and application of Java.
+- Various Java and Python codes that I've written while learning and exploring these languages.
+- Projects that I've worked on, showcasing my understanding and application of Java and Python.
 
 ## Projects
 
@@ -15,7 +15,7 @@ Here, you'll find a list of projects that I've worked on. Each project has its o
 
 ## Learning Journey
 
-This repository reflects my journey learning Java. It's been a great experience and I'm excited to learn more and work on more complex projects in the future.
+This repository reflects my journey learning Java and Python. It's been a great experience and I'm excited to learn more and work on more complex projects in the future.
 
 ## Contributing
 
@@ -25,4 +25,4 @@ While this repository is primarily for my personal use, I'm open to collaboratio
 
 All projects and codes in this repository are released under the MIT license.
 
-Thank you for visiting my JavaWorkSpace!
+Thank you for visiting my JPyWorkSpace!
