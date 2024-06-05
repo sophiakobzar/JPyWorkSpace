@@ -1,0 +1,15 @@
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\bin\Debug\net8.0\GettingStarted.exe
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\bin\Debug\net8.0\GettingStarted.deps.json
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\bin\Debug\net8.0\GettingStarted.runtimeconfig.json
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\bin\Debug\net8.0\GettingStarted.dll
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\bin\Debug\net8.0\GettingStarted.pdb
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\obj\Debug\net8.0\GettingStarted.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\obj\Debug\net8.0\GettingStarted.AssemblyInfoInputs.cache
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\obj\Debug\net8.0\GettingStarted.AssemblyInfo.cs
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\obj\Debug\net8.0\GettingStarted.csproj.CoreCompileInputs.cache
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\obj\Debug\net8.0\GettingStarted.sourcelink.json
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\obj\Debug\net8.0\GettingStarted.dll
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\obj\Debug\net8.0\refint\GettingStarted.dll
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\obj\Debug\net8.0\GettingStarted.pdb
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\obj\Debug\net8.0\GettingStarted.genruntimeconfig.cache
+C:\Users\sophi\Documents\JPyWorkSpace\GettingStarted\obj\Debug\net8.0\ref\GettingStarted.dll
