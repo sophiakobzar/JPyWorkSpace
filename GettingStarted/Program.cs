@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 class Program
 {
@@ -16,7 +17,14 @@ class Program
         Console.WriteLine("Unsorted array:");
         PrintArray(arr); // Display the unsorted array
 
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start(); // Start the stopwatch
+
         BubbleSort(arr); // Sort the array using the Bubble Sort algorithm
+
+        stopwatch.Stop(); // Stop the stopwatch
+        Console.WriteLine($"Time taken to Bubble sort: {stopwatch.Elapsed} ms"); // Print the elapsed time in milliseconds
+
         Console.WriteLine("Sorted array:");
         PrintArray(arr); // Display the sorted array
     }
