@@ -19,5 +19,5 @@ The script performs the following steps:
     pip install pandas numpy faker
 
 3. Run the script using Python:
-Replace `machinelearning.py` with the name of your Python script.
+python machinelearning.py
 
