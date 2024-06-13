@@ -17,12 +17,10 @@ public class SimpleProgram {
 		System.out.print("Hello 3");
 		System.out.print("Hello 4\n");
 		
-		
 		int i = 5;
 		double d = 3.14;
 		char c = 'a';
 		float f = 2.108f;
-		
 		System.out.println("\nint: " + i);
 		System.out.println("double: " +d);
 		System.out.println("char: " +c);
@@ -44,29 +42,31 @@ public class SimpleProgram {
 		System.out.println((3 + 4) * 5);//35
 		System.out.println("\nhello " + 4*2);
 		System.out.println("hello " + 4+2);
-		System.out.println("hello " + (4*2));
+		System.out.println("hello " + (4+2));
 		
 		// scanner
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Enter your name: ");
+		System.out.println("Enter your name: ");
 		String name = sc.nextLine();
-		System.out.println("hello "+name);
+		//System.out.println("hello "+name);
 		
-		System.out.print("Enter your age: ");
+		System.out.println("Enter your age: ");
 		int age = sc.nextInt();
 		sc.nextLine();
-		System.out.println("Your age is "+age);
+		//System.out.println("Your age is "+age);
 		
-		System.out.print("Enter a num: ");
+		System.out.println("Enter a num: ");
 		double num = Double.parseDouble(sc.nextLine());
 		//sc.nextLine();
-		System.out.println("Your entered "+num);
+		//System.out.println("Your entered "+num);
 		
 		Integer a = 4;
 		
 		Double.toString(d);
 		Integer.toString(a);
+		
+		System.out.print("Hello " + name +", your age is " + age + ", and you entered " +num);
 		
 		sc.close();
 	}
