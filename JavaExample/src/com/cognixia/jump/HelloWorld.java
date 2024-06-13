@@ -1,28 +1,9 @@
-/*
-Print a tree by level
-*/
+package com.cognixia.jump;
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
-/*
-Tree Structure:
-    1
-   / \
-  2   3
- / \  / \
-4  5  6  7
-
-The printed levels would look like this:
-1
-2 3
-4 5 6 7
-...
-
-*/
-
 class Tree {
     // Node class for the binary tree
     public int val; // Value of the node
@@ -38,8 +19,7 @@ class Tree {
 }
 
 public class HelloWorld {
-    
-    public static void main(String[] args) {
+	public static void main(String[] args) {
         // Printing a greeting message
         System.out.println("Hello, World! ");
         
