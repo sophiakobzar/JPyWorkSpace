@@ -7,11 +7,11 @@ public class SimpleProgram {
 		// single line comment 
 		
 		/* 	this is a 
-		 	java doc
-		 	comment	 
-		 */
-		
-
+		 	java doc	 
+		 	comment	*/
+		System.out.println("Hello");
+		System.out.println("Hello2");
+		System.out.print("Hello 3");
+		System.out.print("Hello 4");
 	}
-
 }
