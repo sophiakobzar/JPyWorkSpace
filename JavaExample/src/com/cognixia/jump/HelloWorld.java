@@ -1,9 +1,5 @@
 package com.cognixia.jump;
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 class Tree {
     // Node class for the binary tree
     public int val; // Value of the node
