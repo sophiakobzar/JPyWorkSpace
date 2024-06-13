@@ -6,7 +6,7 @@ public class FlowControlExample {
 		ifStatment();
 	}
 	public static void ifStatment() {
-		int num1 = 2;
+		int num1 = 3;
 		if(num1 > 0)
 		{
 			System.out.println(num1 + " is positive");
@@ -15,7 +15,7 @@ public class FlowControlExample {
 		{
 			System.out.println(num1 + " is negative");
 		}
-		else if(num1 > 2) // will never get because  2>0 first is
+		else if(num1 > 2) // will never get because  2>0 first if is 1st
 		{
 			System.out.println(num1 + " is larger than 2");
 		}
