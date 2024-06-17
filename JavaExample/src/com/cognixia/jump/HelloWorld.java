@@ -16,6 +16,9 @@ class Tree {
 
 public class HelloWorld {
 	public static void main(String[] args) {
+		int[] myArray; // Declare an array (no actual array created yet)
+		myArray = new int[5]; // Create an array of integers of size 5
+
         // Printing a greeting message
         System.out.println("Hello, World! ");
         
@@ -50,7 +53,7 @@ public class HelloWorld {
 
             // Process all nodes at the current level
             for (int i = 0; i < size; i++) {
-                Tree currentNode = queue.poll(); // Get the next node
+                Tree currentNode = queue.poll();
 
                 // Print the value of the current node
                 System.out.print(currentNode.val + " ");
