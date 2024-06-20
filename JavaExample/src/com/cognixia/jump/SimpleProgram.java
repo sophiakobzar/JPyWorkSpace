@@ -27,15 +27,36 @@ public class SimpleProgram {
 								new TreeNode(14, null, null),
 								new TreeNode(15, null, null)))
 		);
-
 		// Create the second tree
 		TreeNode tree2 = new TreeNode(1,
 				new TreeNode(2, null, null),
-				null
+				new TreeNode(3, null, null)
+		);
+		TreeNode tree3 = new TreeNode(1,
+				new TreeNode(2,
+						new TreeNode(4,
+								new TreeNode(8, null, null),
+								new TreeNode(9, null, null)),
+						new TreeNode(5,
+								new TreeNode(10, null, null),
+								new TreeNode(11, null, null))),
+				new TreeNode(3,
+						new TreeNode(6,
+								new TreeNode(12, null, null),
+								new TreeNode(13, null, null)),
+						new TreeNode(7,
+								new TreeNode(14, null, null),
+								new TreeNode(15, null, null)))
 		);
 		System.out.println("\nPrinting tree by level");
 		printTreeByLevel(tree);
-		System.out.println("\nAre the trees same? " + SimpleProgram.isSameTree(tree, tree2));
+		System.out.println("\nPrinting tree2 by level");
+		printTreeByLevel(tree2);
+		System.out.println("\nPrinting tree3 by level");
+		printTreeByLevel(tree3);
+		System.out.println("\nAre tree and tree2 the same? " + (SimpleProgram.isSameTree(tree, tree2) ? "Yes" : "No"));
+		System.out.println("Are tree and tree3 the same? " + (SimpleProgram.isSameTree(tree, tree3) ? "Yes" : "No"));
+
 	}
 	public static String reverseString(char[] originalString){
 		int length = originalString.length;
@@ -65,15 +86,18 @@ public class SimpleProgram {
 			// Process all nodes at the current level
 			for (int i = 0; i < levelSize; i++) {
 				TreeNode currentNode = levelNodes.poll();
-				// Print the value of the current node
-				System.out.print(currentNode.val + " ");
-				// Add left child to the queue if it exists
-				if (currentNode.left != null) {
-					levelNodes.add(currentNode.left);
-				}
-				// Add right child to the queue if it exists
-				if (currentNode.right != null) {
-					levelNodes.add(currentNode.right);
+				// Check if currentNode is null before trying to access its value
+				if (currentNode != null) {
+					// Print the value of the current node
+					System.out.print(currentNode.val + " ");
+					// Add left child to the queue if it exists
+					if (currentNode.left != null) {
+						levelNodes.add(currentNode.left);
+					}
+					// Add right child to the queue if it exists
+					if (currentNode.right != null) {
+						levelNodes.add(currentNode.right);
+					}
 				}
 			}
 			// Move to the next line after printing all nodes at the current level
