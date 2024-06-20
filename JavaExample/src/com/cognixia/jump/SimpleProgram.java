@@ -54,8 +54,8 @@ public class SimpleProgram {
 		printTreeByLevel(tree2);
 		System.out.println("\nPrinting tree3 by level");
 		printTreeByLevel(tree3);
-		System.out.println("\nAre tree and tree2 the same? " + (SimpleProgram.isSameTree(tree, tree2) ? "Yes" : "No"));
-		System.out.println("Are tree and tree3 the same? " + (SimpleProgram.isSameTree(tree, tree3) ? "Yes" : "No"));
+		System.out.println("\nAre tree and tree2 the same? " + (isSameTree(tree, tree2) ? "Yes" : "No"));
+		System.out.println("Are tree and tree3 the same? " + (isSameTree(tree, tree3) ? "Yes" : "No"));
 
 	}
 	public static String reverseString(char[] originalString){
