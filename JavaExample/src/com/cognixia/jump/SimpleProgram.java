@@ -2,13 +2,12 @@ package com.cognixia.jump;
 import java.util.*;
 public class SimpleProgram {
 	public static void main(String[] args) {
-		// scanner
+		System.out.print("Enter your name     : ");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter your name  : ");
 		String name = sc.nextLine();
 		String reverseName = new StringBuilder(name).reverse().toString();
-		System.out.println("Using built in   : " + reverseName);
-		System.out.println("Created function : " + reverseString(name.toCharArray()));
+		System.out.println("Using StringBuilder : " + reverseName);
+		System.out.println("Created function    : " + reverseString(name.toCharArray()));
 		sc.close();
 		// Create the first tree
 		TreeNode tree = new TreeNode(1,
