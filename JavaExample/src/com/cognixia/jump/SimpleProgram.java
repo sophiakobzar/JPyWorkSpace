@@ -22,21 +22,21 @@ public class SimpleProgram {
 				new TreeNode(2, null, null),
 				null
 		);
-		System.out.println("Printing tree by level");
+		System.out.println("\nPrinting tree by level");
 		printTreeByLevel(tree);
-		System.out.println("\nAre they same? " + SimpleProgram.isSameTree(tree, tree2));
+		System.out.println("\nAre the trees same? " + SimpleProgram.isSameTree(tree, tree2));
 
 	}
-	public static String reverseString(char[] str)
+	public static String reverseString(char[] originalString)
 	{
-		char[] reCharacters = new char[str.length];
-		int index = 0;
-		for(int i = (str.length-1); i >=0; i--)
-		{
-			reCharacters[index] = str[i];
-			index++;
+		int length = originalString.length;
+		char[] reversedCharacters = new char[length];
+		// Iterate over the original string in reverse order
+		for (int i = length - 1, j = 0; i >= 0; i--, j++) {
+			// Copy each character to the reversed string
+			reversedCharacters[j] = originalString[i];
 		}
-		return new String(reCharacters);
+		return new String(reversedCharacters);
 	}
 
 	public static void printTreeByLevel(TreeNode root)
