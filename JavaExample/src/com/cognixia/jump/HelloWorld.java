@@ -1,20 +1,6 @@
 package com.cognixia.jump;
 import java.util.*;
 
-class TreeNode {
-    // Node class for the binary tree
-    public int val; // Value of the node
-    public TreeNode left; // Left child of the node
-    public TreeNode right; // Right child of the node
-
-    // Constructor to initialize the node
-    public TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
 public class HelloWorld {
 	public static void main(String[] args) {
         // Creating a sample tree
