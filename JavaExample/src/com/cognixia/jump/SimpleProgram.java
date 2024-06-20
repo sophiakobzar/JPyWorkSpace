@@ -1,7 +1,5 @@
 package com.cognixia.jump;
 import java.util.*;
-
-
 public class SimpleProgram {
 	public static void main(String[] args) {
 		// scanner
@@ -14,9 +12,22 @@ public class SimpleProgram {
 		sc.close();
 		// Create the first tree
 		TreeNode tree = new TreeNode(1,
-				new TreeNode(2, null, null),
-				null
+				new TreeNode(2,
+						new TreeNode(4,
+								new TreeNode(8, null, null),
+								new TreeNode(9, null, null)),
+						new TreeNode(5,
+								new TreeNode(10, null, null),
+								new TreeNode(11, null, null))),
+				new TreeNode(3,
+						new TreeNode(6,
+								new TreeNode(12, null, null),
+								new TreeNode(13, null, null)),
+						new TreeNode(7,
+								new TreeNode(14, null, null),
+								new TreeNode(15, null, null)))
 		);
+
 		// Create the second tree
 		TreeNode tree2 = new TreeNode(1,
 				new TreeNode(2, null, null),
@@ -25,10 +36,8 @@ public class SimpleProgram {
 		System.out.println("\nPrinting tree by level");
 		printTreeByLevel(tree);
 		System.out.println("\nAre the trees same? " + SimpleProgram.isSameTree(tree, tree2));
-
 	}
-	public static String reverseString(char[] originalString)
-	{
+	public static String reverseString(char[] originalString){
 		int length = originalString.length;
 		char[] reversedCharacters = new char[length];
 		// Iterate over the original string in reverse order
@@ -38,30 +47,33 @@ public class SimpleProgram {
 		}
 		return new String(reversedCharacters);
 	}
-
-	public static void printTreeByLevel(TreeNode root)
-	{
+	public static void printTreeByLevel(TreeNode root) {
 		// If the root is null, there's nothing to print
 		if (root == null) {
 			return;
 		}
+
 		// Queue to hold nodes at the current level
-		Queue<TreeNode> queue = new LinkedList<>();
-		queue.add(root); // Start with the root node
+		Queue<TreeNode> levelNodes = new LinkedList<>();
+		levelNodes.add(root); // Start with the root node
+
 		// Loop while there are nodes to process
-		while (!queue.isEmpty()) {
+		while (!levelNodes.isEmpty()) {
+			// Get the number of nodes at the current level
+			int levelSize = levelNodes.size();
+
 			// Process all nodes at the current level
-			for (int i = 0; i < queue.size(); i++) {
-				TreeNode currentNode = queue.poll();
+			for (int i = 0; i < levelSize; i++) {
+				TreeNode currentNode = levelNodes.poll();
 				// Print the value of the current node
 				System.out.print(currentNode.val + " ");
 				// Add left child to the queue if it exists
 				if (currentNode.left != null) {
-					queue.add(currentNode.left);
+					levelNodes.add(currentNode.left);
 				}
 				// Add right child to the queue if it exists
 				if (currentNode.right != null) {
-					queue.add(currentNode.right);
+					levelNodes.add(currentNode.right);
 				}
 			}
 			// Move to the next line after printing all nodes at the current level
