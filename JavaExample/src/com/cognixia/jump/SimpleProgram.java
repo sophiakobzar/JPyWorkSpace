@@ -59,7 +59,10 @@ public class SimpleProgram {
 
 		int[] nums1 = {1, 2, 3, 4, 5, 6};
 		int[] nums2 = {4, 5, 6, 7, 8, 9};
-		System.out.println("\nFinding difference between num1 and num2: "+findDifference(nums1, nums2));
+		System.out.println();
+		printIntArray(nums1);
+		printIntArray(nums2);
+		System.out.println("Finding difference between num1 and num2: "+findDifference(nums1, nums2));
 		// Creating a linked list with values 1 -> 2 -> 3 -> 4 -> 5
 		ListNode head = new ListNode(1);
 		head.next = new ListNode(2);
@@ -237,5 +240,14 @@ public class SimpleProgram {
 		}
 
 		return fib[n];
+	}
+
+	public static void printIntArray(int[] nums)
+	{
+		for(int i =0; i<nums.length;i++)
+		{
+			System.out.print(nums[i] + " ");
+		}
+		System.out.println();
 	}
 }
