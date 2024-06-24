@@ -76,6 +76,7 @@ public class SimpleProgram {
 		printList(head);
 		System.out.println("\ntribonacci n=3: "+tribonacci(3));
 		System.out.println("fibonacci n=6: "+fibonacci(6));
+		System.out.println("countBits n=6: "+ Arrays.toString(countBits(6)));
 	}
 	public static String reverseString(char[] originalString){
 		int length = originalString.length;
@@ -249,5 +250,22 @@ public class SimpleProgram {
 			System.out.print(nums[i] + " ");
 		}
 		System.out.println();
+	}
+
+	public static int[] countBits(int n) {
+		int[] bits = new int[n + 1];
+		bits[0] = 0; // Base case: 0 has 0 '1's
+
+		for (int i = 1; i <= n; i++) {
+			// To count the '1's in i, we can use the previously computed value
+			// for a smaller number (i & (i - 1)) and add 1.
+			// The operation i & (i - 1) effectively removes the rightmost set
+			// bit from i. Why? Because (i - 1) has the same bits as i up to
+			// and including the rightmost set bit, and all bits to the right of
+			// it are flipped.
+			bits[i] = bits[i & (i - 1)] + 1;
+		}
+
+		return bits;
 	}
 }
