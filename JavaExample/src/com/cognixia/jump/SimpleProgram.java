@@ -77,6 +77,8 @@ public class SimpleProgram {
 		System.out.println("\ntribonacci n=3: "+tribonacci(3));
 		System.out.println("fibonacci n=6: "+fibonacci(6));
 		System.out.println("countBits n=6: "+ Arrays.toString(countBits(6)));
+		int[] temperatures = {73,74,75,71,69,72,76,73};
+		System.out.println("\ndailyTemperatures array function: "+ Arrays.toString(dailyTemperatures(temperatures)));
 	}
 	public static String reverseString(char[] originalString){
 		int length = originalString.length;
@@ -243,12 +245,10 @@ public class SimpleProgram {
 		return fib[n];
 	}
 
-	public static void printIntArray(int[] nums)
-	{
-		for(int i =0; i<nums.length;i++)
-		{
-			System.out.print(nums[i] + " ");
-		}
+	public static void printIntArray(int[] nums) {
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
 		System.out.println();
 	}
 
@@ -267,5 +267,20 @@ public class SimpleProgram {
 		}
 
 		return bits;
+	}
+	public static int[] dailyTemperatures(int[] temperatures) {
+		int n = temperatures.length;
+		int[] result = new int[n];
+		Stack<Integer> stack = new Stack<>();
+
+		for (int i = 0; i < n; i++) {
+			while (!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
+				int index = stack.pop();
+				result[index] = i - index;
+			}
+			stack.push(i);
+		}
+
+		return result;
 	}
 }
