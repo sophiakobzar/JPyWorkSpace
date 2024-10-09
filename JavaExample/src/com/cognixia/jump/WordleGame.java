@@ -12,10 +12,11 @@ public class WordleGame {
     public void playGame() {
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < 6; i++) {
-            System.out.println("Enter your guess:");
+            System.out.println("Enter your guess: _ _ _ _ _");
             String guess = scanner.nextLine();
             if (guess.equals(secretWord)) {
                 System.out.println("Congratulations! You've guessed the word correctly.");
+                scanner.close();
                 return;
             } else {
                 StringBuilder hint = new StringBuilder();
@@ -30,12 +31,13 @@ public class WordleGame {
                         hint.append(guess.charAt(j) + "(Gray) ");
                     }
                 }
-
                 System.out.println(hint);
+                System.out.println();
             }
 
         }
         System.out.println("Sorry, you didn't guess the word. The correct word was: " + secretWord);
+        scanner.close();
     }
     public int checkLetter(String str, char letter) {
         int count = 0;
