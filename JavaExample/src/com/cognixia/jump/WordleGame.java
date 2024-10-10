@@ -68,9 +68,10 @@ public class WordleGame {
 
     public static void main(String[] args) {
     	Random rand = new Random();
-    	String[] words = {"three", "crimson", "glimmer", "mystery", "breathe"};
+    	String[] words = {"three", "crimson", "glimmer", 
+    						"mystery", "breathe"}; // You can replace/add any word you want
     	int rand_int = rand.nextInt(words.length);
-    	WordleGame game = new WordleGame(words[rand_int]); // You can replace with any word you want
+    	WordleGame game = new WordleGame(words[rand_int]); 
         game.playGame();
     }
 }
