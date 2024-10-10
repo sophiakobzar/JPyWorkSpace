@@ -68,7 +68,7 @@ public class WordleGame {
         return count;
     }
     // prints the lines. The amount of lines equals amount of letter shown below
-    // three <- 5 letters so below returns
+    // words <- 5 letters so below returns
     // _ _ _ _ _
     public StringBuilder printLines(int amountOfLines) {
         StringBuilder lines = new StringBuilder();
@@ -84,7 +84,7 @@ public class WordleGame {
     	Random rand = new Random();
     	String[] words = {"three", "crimson", "glimmer", 
     						"mystery", "breathe"}; // You can replace/add any word you want
-    	int rand_int = rand.nextInt(words.length); // random choice the word in array words
+    	int rand_int = rand.nextInt(words.length); // random choose the word in array words
     	WordleGame game = new WordleGame(words[rand_int]); 
         game.playGame();
     }
