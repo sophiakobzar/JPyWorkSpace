@@ -3,3 +3,5 @@
 *.class
 /eclipse
 /.metadata
+# Ignore the newData.csv file in the machineLearning directory
+JPyWorkSpace/machineLearning/newData.csv
