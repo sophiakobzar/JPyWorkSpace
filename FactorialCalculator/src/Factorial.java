@@ -10,6 +10,7 @@ public class Factorial {
         int number = scanner.nextInt();
         long factorial = calculateFactorial(number);
         System.out.println("The factorial of " + number + " is " + factorial);
+        scanner.close();
     }
 
     public static long calculateFactorial(int n) {
