@@ -18,6 +18,8 @@ def generate_row():
     account = fake.random_element(elements=data['account'].unique())
     symbol = fake.random_element(elements=data['symbol'].unique())
     quantity, price = gmm.sample()
+    # Scale the quantity value
+    quantity = quantity / 1000  # Adjust the scaling factor as needed
     return {'account': account, 'symbol': symbol, 'quantity': quantity, 'price': price}
 
 # Generate new data
