@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from faker import Faker
-from sklearn.mixture import GaussianMixture
 
 # Load the dataset
 data = pd.read_csv('sampleCsvData.csv')
@@ -9,17 +8,12 @@ data = pd.read_csv('sampleCsvData.csv')
 # Initialize a Faker instance
 fake = Faker()
 
-# Fit a Gaussian Mixture Model to the original data
-gmm = GaussianMixture(n_components=3, random_state=0)
-gmm.fit(data[['quantity', 'price']])
-
 # Define a function to generate a new row
 def generate_row():
     account = fake.random_element(elements=data['account'].unique())
     symbol = fake.random_element(elements=data['symbol'].unique())
-    quantity, price = gmm.sample()
-    # Scale the quantity value
-    quantity = quantity / 1000  # Adjust the scaling factor as needed
+    quantity = np.abs(np.random.normal(loc=data['quantity'].mean(), scale=data['quantity'].std()))
+    price = np.abs(np.random.normal(loc=data['price'].mean(), scale=data['price'].std()))
     return {'account': account, 'symbol': symbol, 'quantity': quantity, 'price': price}
 
 # Generate new data
