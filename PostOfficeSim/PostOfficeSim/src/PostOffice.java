@@ -26,7 +26,7 @@ public class PostOffice
   public static Semaphore order= new Semaphore( 0, true );
   public static Semaphore finished[] = new Semaphore[50]; // order was completed the customer can leave
   // main creates all the threads for the 3 workers and 50 customer
-  // we use semphores to let the people in the simulation know when something is ready 
+  // we use Semaphore to let the people in the simulation know when something is ready 
   
 	public static void main(String args[])
     { 
@@ -48,7 +48,7 @@ public class PostOffice
 		PostalWorker WorkerObj[] = new PostalWorker[TotalPostalWorkers];
         
         
-        //thread initialised for customers
+        //thread initialized for customers
         for(int i = 0; i < TotalCustomers ; ++i ) 
         {
            CustomerObj[i] = new Customer(i,TotalPostalWorkers, TotalCustomers,finished,customer_action,max_capacity,freeCounter,counterAvailable,worker,cust_ready,mutex,mutex2,scaleInUse,customer_entered,serve_signal,order_finish,order);
@@ -56,7 +56,7 @@ public class PostOffice
            Customerthread[i].start();
         }
         
-        //thread initialised for workers        
+        //thread initialized for workers        
         for(int j = 0; j < TotalPostalWorkers; ++j ) 
         {
         	WorkerObj[j] = new PostalWorker(j,TotalPostalWorkers, TotalCustomers,finished,customer_action,max_capacity,freeCounter,counterAvailable,worker,cust_ready,mutex,mutex2,scaleInUse,customer_entered,serve_signal,order_finish,order);
